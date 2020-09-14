@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>ISTE Events</title>
+		<META NAME="theme-color" CONTENT="#090257">
+		<LINK REL="icon" SIZES="192x192" HREF="images/logoISTE.png"> 
+		<LINK REL="stylesheet" HREF="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/events.css" />
+		<link rel="stylesheet" type="text/css" href="css/interactive-svg.css" />
+		<link rel="stylesheet" type="text/css" href="css/style12.css" />
+		<link rel="stylesheet" type="text/css" href="css/button.css" />
+		<link rel="stylesheet" type="text/css" href="css/contactus.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" /> -->
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/snap.svg-min.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+			<header class="clearfix">
+				<h1> EVENTS <span> Workshops, Seminars, Competitions, you name it. </span> </h1>
+			</header>
+			
+			<div class="main">
+
+				<div id="stage"></div>
+
+				<p><small>* Any statistics or information displayed herein is for display purposes but totally intended to be factual (even if at times slightly outdated).</small></p>
+			
+			<p> <button id="trigger-overlay" type="button" class="buttone button--line button--effect-1">
+				<span class="morph-shape" data-morph-active="M282.5,62.5c0,27.891-17.583,50.176-46.5,53.5c-21.75,2.5-64.355,4-86,4c-21.645,0-65-1-86-4c-29.408-4.201-46.5-25.609-46.5-53.5l0,0C17.5,34.609,36.594,13.177,64,8c22.5-4.25,64.355-4,86-4c21.645,0,64.669,1.31,86,4C263.75,11.5,282.5,34.609,282.5,62.5L282.5,62.5z">
+				<svg width="100%" height="100%" viewBox="0 0 300 125" preserveAspectRatio="none">
+				<path d="M286.5,62.5c0,27.891-22.609,50.5-50.5,50.5c-21.5,0-64.355,0-86,0c-21.645,0-64.5,0-86,0c-27.891,0-50.5-22.609-50.5-50.5l0,0C13.5,34.609,36.109,12,64,12c21.5,0,64.355,0,86,0c21.645,0,64.5,0,86,0C263.891,12,286.5,34.609,286.5,62.5L286.5,62.5z"/>
+				</svg>
+				</span>
+				<span class="button__text">MENU</span>
+			</button> </p>
+			<script>
+						(function() {
+
+							function extend( a, b ) {
+								for( var key in b ) { 
+									if( b.hasOwnProperty( key ) ) {
+										a[key] = b[key];
+									}
+								}
+								return a;
+							}
+							
+							function SVGButton( el, options ) {
+								this.el = el;
+								this.options = extend( {}, this.options );
+								extend( this.options, options );
+								this.init();
+							}
+
+							SVGButton.prototype.options = {
+								speed : { reset : 800, active : 150 },
+								easing : { reset : mina.elastic, active : mina.easein }
+							};
+
+							SVGButton.prototype.init = function() {
+								this.shapeEl = this.el.querySelector( 'span.morph-shape' );
+
+								var s = Snap( this.shapeEl.querySelector( 'svg' ) );
+								this.pathEl = s.select( 'path' );
+								this.paths = {
+									reset : this.pathEl.attr( 'd' ),
+									active : this.shapeEl.getAttribute( 'data-morph-active' )
+								};
+
+								this.initEvents();
+							};
+
+							SVGButton.prototype.initEvents = function() {
+								this.el.addEventListener( 'mousedown', this.down.bind(this) );
+								this.el.addEventListener( 'touchstart', this.down.bind(this) );
+
+								this.el.addEventListener( 'mouseup', this.up.bind(this) );
+								this.el.addEventListener( 'touchend', this.up.bind(this) );
+
+								this.el.addEventListener( 'mouseout', this.up.bind(this) );
+							};
+
+							SVGButton.prototype.down = function() {
+								this.pathEl.stop().animate( { 'path' : this.paths.active }, this.options.speed.active, this.options.easing.active );
+							};
+
+							SVGButton.prototype.up = function() {
+								this.pathEl.stop().animate( { 'path' : this.paths.reset }, this.options.speed.reset, this.options.easing.reset );
+							};
+
+							[].slice.call( document.querySelectorAll( 'button.button--effect-1' ) ).forEach( function( el ) {
+								new SVGButton( el );
+							} );
+
+							[].slice.call( document.querySelectorAll( 'button.button--effect-2' ) ).forEach( function( el ) {
+								new SVGButton( el, {
+									speed : { reset : 650, active : 650 },
+									easing : { reset : mina.elastic, active : mina.elastic }
+								} );
+							} );
+
+						})();			
+			</script>
+			
+			<div class="overlay overlay-genie" data-steps="m 701.56545,809.01175 35.16718,0 0,19.68384 -35.16718,0 z;m 698.9986,728.03569 41.23353,0 -3.41953,77.8735 -34.98557,0 z;m 687.08153,513.78234 53.1506,0 C 738.0505,683.9161 737.86917,503.34193 737.27015,806 l -35.90067,0 c -7.82727,-276.34892 -2.06916,-72.79261 -14.28795,-292.21766 z;m 403.87105,257.94772 566.31246,2.93091 C 923.38284,513.78233 738.73561,372.23931 737.27015,806 l -35.90067,0 C 701.32034,404.49318 455.17312,480.07689 403.87105,257.94772 z;M 51.871052,165.94772 1362.1835,168.87863 C 1171.3828,653.78233 738.73561,372.23931 737.27015,806 l -35.90067,0 C 701.32034,404.49318 31.173122,513.78234 51.871052,165.94772 z;m 52,26 1364,4 c -12.8007,666.9037 -273.2644,483.78234 -322.7299,776 l -633.90062,0 C 359.32034,432.49318 -6.6979288,733.83462 52,26 z;m 0,0 1439.999975,0 0,805.99999 -1439.999975,0 z">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 806" preserveAspectRatio="none">
+				<path class="overlay-path" d="m 701.56545,809.01175 35.16718,0 0,19.68384 -35.16718,0 z"/>
+			</svg>
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#events">Events</a></li>
+					<li><a href="AboutUs.html">The Team</a></li>
+					<li><a href="events.html"> Event Calendar </a></li>
+					<li><a href="AboutUs.html#membership">Membership</a></li>
+					<!--<li><a href="#">Archive</a></li>-->
+				</ul>
+			</nav>
+			</div>
+		
+			<!-- <div class="md-modal md-effect-18" id="modal-18">
+				<div class="md-content">
+					<h3>Modal Dialog</h3>
+					<div>
+						<p>This is a modal window. You can do the following things with it:</p>
+						<ul>
+							<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+							<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+							<li><strong>Close:</strong> click on the button below to close the modal.</li>
+						</ul>
+						<button class="md-close">Close me!</button>
+					</div>
+				</div>
+			</div> -->
+			
+			</div> <!-- class main -->
+		<!-- <button class="md-trigger md-setperspective" data-modal="modal-18">Make way!</button>
+		</div>
+		<div class="md-overlay"></div> --> <!-- the overlay element -->
+		
+		<P STYLE='background-color:#333333;' CLASS='footer'> <BR> Copyright ISTE SFIT. All Rights Reserved. 2020. <A HREF="about.html"> About Site </A> <BR> <A HREF="https://www.instagram.com/iste_sfit" CLASS="fa fa-instagram fa-footer"> </A> <A HREF="https://www.facebook.com/istesfit" CLASS="fa fa-facebook fa-footer"> </A>
+		</P>
+		
+		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/demo12.js"></script>
+		<script src="js/pathLoader.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="js/interactive-svg.js"></script>
+	</body>
+</html>
