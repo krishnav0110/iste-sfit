@@ -1,11 +1,39 @@
 		.mySlides {
 		  display: none;
-		  align:center;
+		  align-content:center;
 		}
 		
 		img {
 		  vertical-align: middle;
 		  border-radius: 8px;
+		}
+			@font-face {
+			  font-family:'Sansita Swashed', cursive;
+			  src: url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+              }
+			 @font-face {
+			  font-family:'Dancing Script', cursive;
+			  src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+              } 
+			  @font-face {
+			  font-family:'Rajdhani', sans-serif;
+			  src: url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+              } 
+			  @font-face{
+				  font-family:'Lobster Two', cursive;
+				  src:url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+			  }
+			  
+		
+		.logostext
+		{
+			    display: inline-block;
+				margin-left: auto;
+				margin-right: auto;
+				color:#090257;
+				font-family:ui-monospace;
+				font-weight: bold;
+				font-size: xxx-large;
 		}
 
 		.slideshow-container {		/* Slideshow container */
@@ -18,15 +46,23 @@
 		  margin-bottom: 5px;
 		}
 		.imgslide {
-		  height:10%;
+		  height:15%;
 		  display: block;
 		  margin-left: auto;
 		  margin-right: auto;
 		}
-		@media screen and (max-width: 700px) {
+		
+		.responsive {
+				  width: 100%;
+				  max-width: 800px;
+				  height: auto;
+        }
+		@media screen and (max-height: 800px) {
 		  .imgslide {
-		    height:13%;
-		    width: 100%;
+		   
+		  max-width:700px;
+		  height: 300px;
+			object-fit:fill;
 		    display: block;
 		    margin-left: auto;
 		    margin-right: auto;
@@ -52,15 +88,23 @@
 		}
 		
 		.dot {						/* The dots/bullets/indicators */
-		  height: 15px;
-		  width: 15px;
+		  height: 10px;
+		  width: 12px;
 		  margin: 0 2px;
-		  background-color: #bbb;
+		  background-color: #b1abab;
+		  border-collapse: True;
 		  border-radius: 50%;
 		  display: inline-block;
 		  transition: background-color 0.6s ease;
+		  
+		  
 		}
-		.active {background-color: #717171;}
+		/*.active {background-color: #bbb;}*/
+		.dot.active{
+			height:10px;
+			width:15px;
+			background-color:#0910e6;
+			transition: background-color 1.2s ease;}
 		
 		.fade {						/* Fading animation */
 		  -webkit-animation-name: fade;
@@ -82,12 +126,15 @@
 		  color: white;
 		  font-family: 'Basic';
 		  padding: 15px;
-		  margin-top: 10px;
+		  margin-top: 25px;
+		  margin-left:80px;
+		  margin-right: 80px;
 		  position: static;
-		  #border-radius:20px;
+		  border-radius:20px;
 		  text-align: center;
 		  height:auto;
-		  width:auto;
+		  /* width:1200px; */
+		  width: auto;
 		}
 		
 		#mc_embed_signup {
@@ -96,17 +143,18 @@
 		  height: 15%;
 		  margin: 0 0 0 15%;
 		  padding: 20px;
-		  background: black;
+		  background: rgba(0,0,0,0.5);
 		  border-radius: 50% / 10%;
 		  color: white;
 		  text-align: center;
 		  text-indent: .1em;
 		}
 		#mc_embed_signup:before {
-		  content: '';
+		  
+		  height:220px;
 		  position: absolute;
-		  top: 10%;
-		  bottom: 10%;
+		  top: 2%;
+		  bottom: 20%;
 		  right: -5%;
 		  left: -5%;
 		  color: white;

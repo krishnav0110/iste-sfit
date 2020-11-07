@@ -1,35 +1,35 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 .scene {
-	background: #282886;
+	background: #18225f;
 }
 
 .scene path:first-child {
-	fill: #4f4fea;
+	fill: #0f74e0;
 }
 
 .scene path:nth-child(2) {
-	fill: #0c27cf;
+	fill: #4ca3e7;
 }
 
 .scene path:nth-child(3) {
-	fill: #13269c;
+	fill: #a4cff1;
 }
 
 .scene path:nth-child(4) {
-	fill: #242468;
+	fill: #43a3ef;
 }
 
 .scene path:nth-child(5) {
-	fill: #2648e6;
+	fill: #3ea6ef;
 }
 
 .scene path:nth-child(6) {
-	fill: #2c31b0;
+	fill: #1f53b8;
 }
 
 .scene path:nth-child(7) {
-	fill: #262689;
+	fill: #182863;
 }
 
 .title {
