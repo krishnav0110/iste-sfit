@@ -1,0 +1,51 @@
+.overlay
+{
+ height: 0%;
+ width: 100%;
+ position:absolute;
+ z-index:2000;
+ top: 0;
+ left: 0;
+ background-color: rgba(0,0,0,0.7);
+ /* background-image: url('img/lion.jpg');
+ background-repeat:no-repeat;
+ background-size:cover; */
+ overflow-y:hidden;
+ transition: 0.5s;
+ 
+}
+
+.overlay-content
+{
+  position:relative;
+  /* top: 25%;  */
+  width: 100%; 
+  text-align: center; 
+  margin-top: 30px; 
+  z-index: 3001;
+}
+
+.overlay-content img{
+  height: 90%;
+  width: 90%;
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media only screen and (max-width: 650px) 
+{
+  /* .overlay a {font-size: 20px} */
+  .overlay-content img {
+    width: 80%;
+    height: 50%;
+  }
+}
