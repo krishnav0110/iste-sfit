@@ -25,16 +25,7 @@
 			  }
 			  
 		
-		.logostext
-		{
-			    display: inline-block;
-				margin-left: auto;
-				margin-right: auto;
-				color:#090257;
-				font-family:ui-monospace;
-				font-weight: bold;
-				font-size: xxx-large;
-		}
+	
 
 		.slideshow-container {		/* Slideshow container */
 		  max-width: 1000px;
@@ -136,7 +127,13 @@
 		  /* width:1200px; */
 		  width: auto;
 		}
-		
+		@media screen and (max-width: 550px){
+			.events{
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+		}
+
 		#mc_embed_signup {
 		  position: relative;
 		  width: 70%;
