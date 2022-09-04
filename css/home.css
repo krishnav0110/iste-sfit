@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Dorsa);
+
+/* animate section */
+#animate {
+    font-size: 150px;
+    font-family: 'Dorsa', monospace;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#block-1 {
+    display: flex;
+    padding: 0 10px;
+}
+
+#block-2 {
+    display: flex;
+    width: 50%;
+}
+
+#block-3 {
+    padding: 10px;
+    width: 50%;
+}
+
+#block-1:first-child #block-2 {
+    align-items: flex-end;
+    justify-content: end;
+}
+
+#block-1:nth-child(2) #block-2:last-child {
+    align-items: flex-end;
+}
+
+#block-1:nth-child(3) #block-2:first-child {
+    justify-content: end;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+/* info section */
+#info {
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #313131;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px ;
+}
+
+#info p {
+    font-size: 1.2rem;
+}
