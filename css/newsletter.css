@@ -1,3 +1,12 @@
+#subscribe-form {
+    font-size: 20px;
+    padding: 50px;
+}
+
+#subscribe-form i {
+    font-size: 2rem;
+}
+
 #mc_embed_signup {
     padding: 0 10%;
     text-align: center;

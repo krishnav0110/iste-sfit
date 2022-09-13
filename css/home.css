@@ -1,45 +1,86 @@
-@import url(http://fonts.googleapis.com/css?family=Dorsa);
-
 /* animate section */
 #animate {
-    font-size: 150px;
-    font-family: 'Dorsa', monospace;
+    position: relative;
     width: 100%;
-    margin-bottom: 50px;
+    background-color: black;
+    text-align: center;
 }
 
-#block-1 {
+#animate #bg-pic {
+    width: 100%;
+    height: 110vh;
+    filter: opacity(0.2);
+}
+
+
+
+
+
+#header-container {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    color: white;
+    overflow: hidden;
     display: flex;
-    padding: 0 10px;
+    justify-content: space-between;
 }
 
-#block-2 {
-    display: flex;
-    width: 50%;
+#anim-container #lower {
+    margin-top: 30px;
+    transition: 1s ease;
 }
 
-#block-3 {
-    padding: 10px;
-    width: 50%;
+#anim-container #lower:hover {
+    transform: translate(0, -30px);
+    animation-name: glow-up;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
-#block-1:first-child #block-2 {
-    align-items: flex-end;
-    justify-content: end;
+#anim-container #title {
+    padding: 0 70px;
+    font-size: 120px;
 }
 
-#block-1:nth-child(2) #block-2:last-child {
-    align-items: flex-end;
+
+
+
+
+/* home nav */
+#header-container #home-nav {
+    align-self: flex-end;
+    font-size: 40px;
+    text-align: right;
 }
 
-#block-1:nth-child(3) #block-2:first-child {
-    justify-content: end;
+#home-nav nav li {
+    margin: 30px 0;
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
+#home-nav nav li div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 5px;
+    background-color: white;
 }
+
+#home-nav nav li:hover {
+    text-shadow: 0 0 10px #a6ff00,
+                0 0 20px #a6ff00,
+                0 0 40px #a6ff00,
+                0 0 80px #a6ff00;
+}
+#home-nav nav li:hover div {
+    box-shadow: 0 0 10px #a6ff00, 0 0 20px #a6ff00, 0 0 40px #a6ff00;
+}
+
+/* end of animate section */
+
+
+
 
 
 
@@ -47,21 +88,92 @@ img {
 
 /* info section */
 #info {
-    margin-top: 50px;
-    padding: 50px;
+    padding: 100px;
     background-color: #313131;
     color: white;
     line-height: 40px;
     text-align: center;
     font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #info h2 {
     font-size: 2rem;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
 }
 
 #info p {
     font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    #animate #bg-pic {
+        height: 100vh;
+    }
+
+    #anim-container #title {
+        padding: 0 20px;
+        font-size: 80px;
+    }
+
+    #info {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #header-container {
+        justify-content: center;
+    }
+    #header-container #home-nav {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* animations */
+@keyframes glow-up {
+    0% {
+        text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 120px #00b3ff;
+    }
+    25% {
+        text-shadow: none
+    }
+    50% {
+        text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 120px #00b3ff;
+    }
+    75% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 120px #00b3ff;
+    }
+
 }
