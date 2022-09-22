@@ -9,6 +9,11 @@ section#team {
     padding: 20px;
 }
 
+
+
+
+
+/* container for holding profile cards */
 #team .container {
     padding: 20px;
     background-color: #eeeeee;
@@ -18,21 +23,31 @@ section#team {
     flex-wrap: wrap;
 }
 
+
+
+
+
+/* profile cards properties */
 .profile {
     width: 300px;
     height: 450px;
     margin: 30px;
     padding-top: 20px;
     border-radius: 20px;
+    transition: 0.5s ease;
     overflow: hidden;
     box-shadow: #ffffffee -10px -8px 6px 0px,
                 #0000006e 10px 8px 6px 0px;
 }
 
+.profile:hover {
+    transform: scale(1.05);
+}
+
 .profile img {
     object-fit: cover;
     width: 100%;
-    height: 75%;
+    height: 70%;
 }
 
 .profile h3 {
