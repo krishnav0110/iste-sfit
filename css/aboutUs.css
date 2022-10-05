@@ -14,7 +14,7 @@ section#team {
 
 
 /* container for holding profile cards */
-#team .container {
+#team .profile-container {
     padding: 20px;
     background-color: #eeeeee;
     display: flex;

@@ -1,0 +1,76 @@
+{
+    "faculty": [
+        {
+            "name": "Prof. Bysani Malakondiah",
+            "title": "Faculty Coordinator",
+            "photo": "./img/ISTE/faculty1.jpg"
+        },
+        {
+            "name": "Asst. Prof. Ankita Karia",
+            "title": "Faculty Co-Coordinator",
+            "photo": "./img/logo/ava.jpg"
+        }
+    ],
+    "core": [
+        {
+            "name": "Mihir Ajmera",
+            "title": "President",
+            "photo": "./img/ISTE/22_23/CORE/Mihir.jpg"
+        },
+        {
+            "name": "Jishant",
+            "title": "Vice President",
+            "photo": "./img/ISTE/22_23/CORE/Jishant.jpg"
+        },
+        {
+            "name": "Sheetal Madhesiya",
+            "title": "General Secretary",
+            "photo": "./img/ISTE/22_23/CORE/Sheetal.jpg"
+        },
+        {
+            "name": "Yash Shroff",
+            "title": "Treasurer",
+            "photo": "./img/ISTE/22_23/CORE/Yash-shroff.jpg"
+        },
+        {
+            "name": "Mehul Bhere",
+            "title": "Graphics Head",
+            "photo": "./img/ISTE/22_23/GRAPHICS/MehulBhere.jpg"
+        },
+        {
+            "name": "Adnan Malik",
+            "title": "Marketing Head",
+            "photo": "./img/ISTE/22_23/MARKETING/AdnanMalik.jpg"
+        },
+        {
+            "name": "Gururaj Shetve",
+            "title": "Program Head",
+            "photo": "./img/ISTE/22_23/PROGRAM/Gururaj.jpg"
+        },
+        {
+            "name": "Esha Tewari",
+            "title": "Publicity Head",
+            "photo": "./img/ISTE/22_23/PUBLICITY/eshatewari.jpg"
+        },
+        {
+            "name": "Shreya Prakash",
+            "title": "Jt. Publicity Head",
+            "photo": "./img/ISTE/22_23/PUBLICITY/shreyaprakash.jpeg"
+        },
+        {
+            "name": "Abhishek Vimal",
+            "title": "Social Media Head",
+            "photo": "./img/logo/ava.jpg"
+        },
+        {
+            "name": "Urvi Bajaj",
+            "title": "Technical Head",
+            "photo": "./img/ISTE/22_23/TECHNICAL/UrviBajaj.jpeg"
+        },
+        {
+            "name": "Krishna Vishwakarma",
+            "title": "WebMaster",
+            "photo": "./img/ISTE/22_23/WEB MASTER/KrishnaV.jpg"
+        }
+    ]
+}
