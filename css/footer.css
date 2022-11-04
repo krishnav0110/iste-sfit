@@ -95,5 +95,5 @@ footer .col-container #col3 a {
 /* copyright */
 footer #copyright {
     display: block;
-    margin-top: 20px;
+    margin: 20px 0;
 }

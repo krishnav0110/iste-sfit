@@ -1,14 +1,25 @@
-/* logos */
-.logos {
-    display: inline-block;
-    width: 40px;
-    mix-blend-mode: multiply;
+.navbar {
+    top: 0;
+    position: sticky;
+    padding: 15px 40px;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid #ffffff50;
+    color: white;
+    background-color: #000000ff;
 }
 
-.logostext {
-    display: inline-block;
-    padding: 0 10px;
-    transform: translate(0, -50%);
+
+
+
+
+/* logos */
+.logos {
+    width: 40px;
+    border-radius: 20px;
+    padding: 2px;
+    background-color: white;
 }
 
 
@@ -18,7 +29,6 @@
 /* links positioning */
 .navbar nav {
     display: flex;
-    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -29,7 +39,6 @@
 }
 
 .nav-links li {
-    position: relative; 
     display: inline-block;
     margin: 10px 0;
 }
@@ -40,15 +49,14 @@
 
 /* links styling */
 .nav-links li a {
-    padding: 10px 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
-.nav-links a:hover {
-    background-color: #525252;
-    color: white;
+.nav-links li a:hover {
+    color: #396AA2;
 }
 
-.nav-links a.active {
-    background-color: #007cb1 /*#42F5AD*/;
-    color: white;
+.nav-links li a.active {
+    background-color: #396AA2;
 }
