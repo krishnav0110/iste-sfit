@@ -1,22 +1,101 @@
 #subscribe-form {
-    font-size: 20px;
-    padding: 50px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    --envelope-width: 20vw;
+    --envelope-height: 15vw;
 }
 
-#subscribe-form i {
-    font-size: 2rem;
+#subscribe-form .wrapper {
+    width: calc(var(--envelope-width) * 2);
+    height: calc(var(--envelope-height) * 2);
+    background-color: #2f2f69;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
 }
 
-#mc_embed_signup {
-    padding: 0 10%;
+#subscribe-form .letter {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 2;
     text-align: center;
+    font-size: 1.2rem;
+    transition: 0.5s ease;
 }
 
-#mc_embed_signup_scroll {
-    text-align: center;
+#subscribe-form .envelope, #subscribe-form .lid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-#mce-field-group {
-    padding: 0 50%;
-    text-align: left;
+#subscribe-form .envelope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-top: var(--envelope-height) solid transparent;
+    border-right: var(--envelope-width) solid #3d3d9c;
+    border-bottom: var(--envelope-height) solid #3d3d9c;
+    border-left: var(--envelope-width) solid #9090df;
+    z-index: 3;
+}
+
+#subscribe-form .lid {
+    border-top: var(--envelope-height) solid #7676d3;
+    border-right: var(--envelope-width) solid transparent;
+    border-bottom: var(--envelope-height) solid transparent;
+    border-left: var(--envelope-width) solid transparent;
+    transform: rotateX(0deg);
+    z-index: 3;
+    transform-origin: top;
+    transition: 0.25s ease 0.75s;
+}
+
+#subscribe-form .wrapper:hover .lid, #subscribe-form .wrapper:focus-within .lid {
+    transform: rotateX(180deg);
+    z-index: 1;
+    transition-delay: 0s;
+}
+#subscribe-form .wrapper:hover .letter, #subscribe-form .wrapper:focus-within .letter {
+    transform: translateY(-100%);
+    transition-delay: 0.5s;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    #subscribe-form {
+        --envelope-width: 30vw;
+        --envelope-height: 20vw;
+    }
+}
+@media screen and (max-width: 750px) {
+    #subscribe-form {
+        --envelope-width: 40vw;
+        --envelope-height: 25vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    #subscribe-form {
+        --envelope-width: 45vw;
+        --envelope-height: 35vw;
+    }
+    #subscribe-form .letter {
+        font-size: 1rem;
+    }
 }

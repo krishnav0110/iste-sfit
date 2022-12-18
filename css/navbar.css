@@ -5,7 +5,7 @@
     width: 100%;
     z-index: 100;
     backdrop-filter: blur(5px);
-    border-bottom: 2px solid #ffffff50;
+    border-bottom: 2px solid #ffffff90;
     color: white;
     background-color: #000000ff;
 }
@@ -54,9 +54,9 @@
 }
 
 .nav-links li a:hover {
-    color: #396AA2;
+    color: #6e6ef1;
 }
 
 .nav-links li a.active {
-    background-color: #396AA2;
+    background-color: #5858c7;
 }
