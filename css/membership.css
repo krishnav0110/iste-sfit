@@ -1,0 +1,33 @@
+#membership {
+    text-align: center;
+}
+
+#membership h2 {
+    font-size: 4em;
+    font-weight: lighter;
+    padding: 10px 0;
+    color: white;
+    background: linear-gradient(70deg, #1e1e41, #3d3d70, #131335);
+}
+
+#membership iframe {
+    margin: 50px 0;
+    padding: 100px 0;
+    width: 70%;
+    height: 1900px;
+    box-shadow: #55555540 0px 50px 50px -20px, #0000004d 0px 30px 60px -30px, #38383859 0px -2px 6px 0px inset;
+}
+
+
+
+
+
+@media screen and (max-width:700px) {
+    #membership h2 {
+        font-size: 2em;
+    }
+    #membership iframe {
+        padding: 50px 0;
+        width: 90%;
+    }
+}

@@ -1,0 +1,142 @@
+#about {
+    background-color: #ececec;
+}
+
+#about .desc-container {
+    padding: 50px 30px;
+    background: linear-gradient(70deg, #1e1e41, #3d3d70, #131335);
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 2fr 3fr;
+    box-shadow: 10px 10px 20px #313131;
+}
+
+
+
+
+
+#about .desc-img {
+    position: relative;
+    margin: 10% 0;
+    right: -10%;
+    width: 110%;
+    animation: shake 2s infinite;
+}
+#about .desc-img img {
+    box-shadow: 0 0 20px #000000b7;
+}
+
+#about .desc {
+    vertical-align: middle;
+    padding: 50px 50px 50px 20%;
+    background-color: #ececec;
+    border-radius: 10px;
+}
+#about .desc h3 {
+    margin-bottom: 10px;
+}
+#about .desc p {
+    margin-top: 30px;
+    list-style-type: disc;
+    display: list-item;
+}
+
+
+
+
+
+#about .card-container {
+    padding: 100px 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#about .card {
+    padding: 20px;
+    margin: 20px 0;
+    width: 300px;
+    text-align: center;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    box-shadow: #55555540 0px 50px 50px -20px, #0000004d 0px 30px 60px -30px, #38383859 0px -2px 6px 0px inset;
+    animation: bounce 5s infinite;
+}
+#about .card i {
+    font-size: 50px;
+}
+#about .card:nth-child(1) i { animation: blink-eye 4s infinite; }
+#about .card:nth-child(2) i { animation: drop-target 4s infinite; transform-origin: bottom; }
+#about .card:nth-child(3) i { animation: rotate-card 4s infinite; }
+#about .card h3 {
+    margin: 20px 0;
+}
+#about .card p {
+    text-align: left;
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    #about .desc-container {
+        height: auto;
+        align-items: normal;
+        grid-template-columns: none;
+    }
+    #about .desc-img {
+        margin: 0 auto;
+        right: unset;
+        bottom: -20%;
+        width: 90%;
+    }
+    #about .desc-img img {
+        box-shadow: 0 30px 25px -20px #313131;
+    }
+    #about .desc {
+        padding: 20% 20px 20px 30px;
+    }
+}
+
+
+
+
+
+@keyframes shake {
+    0% { transform: rotateZ(-2deg); }
+    10% { transform: rotateZ(2deg); }
+    20% { transform: rotateZ(-2deg); }
+    30% { transform: rotateZ(2deg); }
+    40%, 100% { transform: rotateZ(-2deg); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0px); }
+    4% { transform: translateY(-50px); }
+    8% { transform: translateY(0px); }
+    12% { transform: translateY(-10px); }
+    16%, 100% { transform: translateY(0px); }
+}
+
+@keyframes blink-eye {
+    0% { transform: rotateX(0deg); }
+    25% { transform: rotateX(360deg); }
+    50%, 100% { transform: rotateX(0deg); }
+}
+@keyframes drop-target {
+    0% { transform: rotateZ(0deg); }
+    10% { transform: rotateZ(230deg); }
+    15% { transform: rotateZ(150deg); }
+    20% { transform: rotateZ(200deg); }
+    25% { transform: rotateZ(160deg); }
+    30% { transform: rotateZ(180deg); }
+    40%, 100% { transform: rotateX(0deg); }
+}
+@keyframes rotate-card {
+    0% { transform: rotateY(0deg); }
+    25% { transform: rotateY(360deg); }
+    50%, 100% { transform: rotateY(0deg); }
+}
