@@ -5,7 +5,7 @@
 #about .desc-container {
     padding: 50px 30px;
     background: linear-gradient(70deg, #1e1e41, #3d3d70, #131335);
-    height: 100vh;
+    height: minmax(100vh, fit-content);
     display: grid;
     align-items: center;
     justify-content: center;
