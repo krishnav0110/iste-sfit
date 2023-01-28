@@ -1,0 +1,92 @@
+#tpp-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000a0;
+}
+
+#tpp {
+    width: 80%;
+    background-color: white;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 7fr 3fr;
+}
+
+#tpp i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#tpp #tpp-img {
+    height: 100%;
+}
+#tpp-img img {
+    object-fit: fill;
+}
+
+#tpp #tpp-info {
+    padding: 20px 20px 20px 30px;
+    background-color: white;
+}
+#tpp #tpp-info li {
+    list-style: disc;
+}
+
+#tpp #link-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20%;
+}
+
+#tpp a {
+    text-align: center;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+#tpp a.pri-btn {
+    color: white;
+    background-color: #6262b3;
+    cursor: not-allowed;
+}
+
+#tpp a.sec-btn {
+    border: 2px solid #6262b3;
+}
+
+#tpp-container #err-msg {
+    font-size: 11px;
+    color: red;
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    #tpp {
+        width: 90%;
+        grid-template-columns: none;
+    }
+    #tpp i {
+        top: -50px;
+        right: -10px;
+    }
+    #tpp #link-container {
+        margin-top: 20px;
+    }
+}
