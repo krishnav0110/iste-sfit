@@ -10,18 +10,12 @@ tpp.innerHTML = `
                     <li>To know more click check details.</li>
                 </ul>
                 <div id="link-container">
-                    <a class="pri-btn">Register Here</a>
+                    <a href="https://forms.gle/rey9wcyYoT29dGPy6" class="pri-btn">Register Here</a>
                     <a href="https://www.instagram.com/p/Cn4o-giL-NA/?igshid=YmMyMTA2M2Y=" class="sec-btn">Check Details</a>
                 </div>
-                <div id="err-msg">Registration will start from February 5, 2023.</div>
             </div>
         </div>
 `;
-
-const errMsg = document.querySelector("#tpp-container #err-msg");
-
-const registerBtn = document.querySelector("#tpp-container .pri-btn");
-registerBtn.addEventListener('click', () => errMsg.style.display = "block");
 
 const closeBtn = document.querySelector("#tpp-container i");
 closeBtn.addEventListener('click', () => tpp.style.display = "none");
